@@ -1,0 +1,67 @@
+<Button>:
+    font_size: 20
+    color: 0,0,.5,1
+    size_hint: 0.20,0.20
+    background_normal: ''
+    canvas.before:
+        Color:
+            rgba: .5, .5, .5, 1
+        Line:
+            width: 2
+            rectangle: self.x, self.y, self.width, self.height
+
+
+<Grid>
+    GridLayout:
+        cols:2
+        spacing: 2
+        size: root.width - 200, root.height - 200
+        pos: 100, 100
+
+        Button:
+            text: "1d20"
+            on_press:
+                root.update_die('1d20')
+                root.roll_dice()
+
+        Button:
+            text: "1d4"
+            on_press:
+                root.update_die('1d4')
+                root.roll_dice()
+
+        Button:
+            text: "1d6"
+            on_press:
+                root.update_die('1d6')
+                root.roll_dice()
+
+        Button:
+            text: "1d8"
+            on_press:
+                root.update_die('1d8')
+                root.roll_dice()
+
+        Button:
+            text: "1d10"
+            on_press:
+                root.update_die('1d10')
+                root.roll_dice()
+
+        Button:
+            text: "1d12"
+            on_press:
+                root.update_die('1d12')
+                root.roll_dice()
+
+        Button:
+            text: "1d100"
+            on_press:
+                root.update_die('1d100')
+                root.roll_dice()
+
+        LabelB:
+            text: root.roll_result
+            font_size: 20
+            bcolor: .2, .2, .2, 1
+            size_hint: 0.20,0.20
